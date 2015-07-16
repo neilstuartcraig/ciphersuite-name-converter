@@ -1,0 +1,24 @@
+{
+  "name": "ciphersuite-name-converter",
+  "version": "0.0.0",
+  "description": "A simple CLI (and possibly web) library/script to convert between openSSL and SSL/TLS ciphersuite names",
+  "main": "ciphersuite-name-converter-shell.js",
+  "scripts": {
+    "test": "echo \"Error: no tests exist (yet)\" && exit 1"
+  },
+  "keywords": [
+    "ssl",
+    "tls",
+    "cipher",
+    "ciphersuite",
+    "convert",
+    "converter"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "convert-openssl-to-tls": "ciphersuite-name-converter-shell.js",
+    "convert-tls-to-openssl": "ciphersuite-name-converter-shell.js"
+  },
+  "author": "Neil Craig <neil.craig@thedotproduct.org>",
+  "license": "MIT"
+}
