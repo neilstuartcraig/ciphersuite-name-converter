@@ -13,7 +13,7 @@ Which you want to use in an application which requires `openssl` format ciphersu
 ```
 #convert-tls-to-openssl "SSL_ECDHE_RSA_WITH_AES_128_GCM_SHA256 SSL_ECDHE_RSA_WITH_AES_256_GCM_SHA384 SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA256 SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA384 SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA"
 
-#ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA
+#ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA
 ```
 
 You can then configure your application with the above openssl format ciphersuite string.
@@ -46,6 +46,17 @@ convert-openssl-to-tls <ciphersuite string>
 Convert TLS to openSSL cipher string: 
 convert-tls-to-openssl <ciphersuite string>
 ```
+
+###Ciphersuite ordering
+The output (converted) ciphersuite names will be in the same order as the input - ordering is preserved.
+
+###Separators
+####Input
+Input ciphersuite lists can use spaces or commas (or a mixture thereof) as separators
+
+####Outputs
+Conversions from TLS/SSL to openSSL format use `:` as a separator in the output.  
+Conversions from openSSL to TLS/SSL format use space as a separator in the output.
 
 ##Semver
 This project aims to maintain the [semver](http://semver.org/) version numbering scheme.

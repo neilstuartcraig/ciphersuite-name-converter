@@ -1,6 +1,6 @@
 {
   "name": "ciphersuite-name-converter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A simple CLI (and possibly web) library/script to convert between openSSL and SSL/TLS ciphersuite names",
   "main": "ciphersuite-name-converter-shell.js",
   "scripts": {
